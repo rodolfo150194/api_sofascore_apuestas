@@ -186,38 +186,6 @@ class SofascoreAPI:
         endpoint = f"/unique-tournament/{tournament_id}/season/{season_id}/events/next/0"
         return await self._get(endpoint)
 
-    async def get_torneo_goleadores(self, tournament_id, season_id):
-        """
-        Obtener tabla de goleadores
-        """
-        endpoint = f"/unique-tournament/{tournament_id}/season/{season_id}/top-players/goals"
-        return await self._get(endpoint)
-
-    async def get_torneos_populares(self):
-        """
-        Obtener lista de torneos populares
-        """
-        # Algunos IDs de torneos populares
-        # La Liga: 8, Premier League: 17, Champions League: 7
-        pass
-
-        # ============================================
-        # MÉTODOS PARA JUGADORES
-        # ============================================
-
-    async def get_jugador_info(self, player_id):
-        """
-        Obtener información de un jugador
-        """
-        endpoint = f"/player/{player_id}"
-        return await self._get(endpoint)
-
-    async def get_jugador_estadisticas(self, player_id, tournament_id, season_id):
-        """
-        Obtener estadísticas de un jugador en un torneo
-        """
-        endpoint = f"/player/{player_id}/unique-tournament/{tournament_id}/season/{season_id}/statistics/overall"
-        return await self._get(endpoint)
 
     # ============================================
     # FUNCIONES DE UTILIDAD
